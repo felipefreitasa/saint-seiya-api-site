@@ -7,7 +7,7 @@ interface SocialIconProps {
 
 export function Footer() {
   return (
-    <footer className="flex items-center justify-center mt-20 pb-10 space-x-3">
+    <footer className="flex items-center justify-center mt-20 pb-6 pt-6 space-x-3 border-t-1 border-[#333333]">
       <div className="space-x-2 flex">
         <SocialIcon
           icon={<GitHub size={18} />}

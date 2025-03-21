@@ -1,7 +1,31 @@
+"use client";
+
+import { Button } from "@/components/Button";
 import { CharacterCard } from "@/components/CharacterCard";
+import { Error } from "@/components/Error";
+import { Loading } from "@/components/Loading";
+import { useCharacterGetList } from "@/domain/Characters/useCases/useCharacterGetList";
+import { shuffleCharacters } from "@/utils/shuffleCharacters";
 import Link from "next/link";
 
 export default function HomePage() {
+  const {
+    characterList,
+    characterListError,
+    refetchCharacterList,
+    isLoadingCharacterList,
+  } = useCharacterGetList();
+
+  if (isLoadingCharacterList) {
+    return <Loading />;
+  }
+
+  if (characterListError) {
+    return <Error message="ERROR" onRetry={refetchCharacterList} />;
+  }
+
+  const characters = shuffleCharacters(characterList?.data.characters) ?? [];
+
   return (
     <main className="flex items-center justify-center flex-col">
       <section className="text-center mt-20 mb-20 px-4 sm:px-8 md:px-16">
@@ -9,25 +33,32 @@ export default function HomePage() {
           The Saint Seiya API
         </h1>
 
-        <h2 className="text-xl sm:text-2xl md:text-3xl mt-2 text-[#999999] font-light font-inter">
+        <h2 className="font-extralight font-inter text-xl sm:text-2xl md:text-2xl mt-1 text-[#999999] mb-2">
           {`Awaken your code's seventh sense`}
         </h2>
 
-        <button className="mt-4 px-6 py-2 bg-white text-black font-inter font-bold rounded-l-full rounded-r-full text-xs hover:bg-[#999999]">
-          <Link href="/docs">Read the docs</Link>
-        </button>
+        <Link href="/docs">
+          <Button title="Read the docs" />
+        </Link>
       </section>
 
       <section className="flex flex-wrap justify-center gap-6 px-4 sm:px-8 md:px-16">
-        <CharacterCard
-          name="Shiryu"
-          image="https://www.saintseiyaapi.com/assets/shiryu.jpeg"
-          constellation="Dragon"
-          gender="Male"
-          mentor="Dohko"
-          rank="Bronze"
-          techniques="Rozanha & Excalibur"
-        />
+        {characters.map((character) => (
+          <CharacterCard
+            key={character._id}
+            name={character.name}
+            rank={character.rank}
+            image={character.image}
+            gender={character.gender}
+            mentor={character.mentor}
+            constellation={character.constellation}
+            techniques={
+              character.techniques.length > 1
+                ? `${character.techniques[0]} & ${character.techniques[1]}`
+                : character.techniques[0]
+            }
+          />
+        ))}
       </section>
     </main>
   );

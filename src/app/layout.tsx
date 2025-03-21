@@ -1,3 +1,4 @@
+import { ReactQueryProvider } from "@/api/reactQueryConfig";
 import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 import type { Metadata } from "next";
@@ -18,8 +19,10 @@ export default function RootLayout({
     <>
       <html lang="en">
         <body>
-          <NavBar />
-          <main className="container mx-auto">{children}</main>
+          <ReactQueryProvider>
+            <NavBar />
+            <main className="container mx-auto">{children}</main>
+          </ReactQueryProvider>
         </body>
       </html>
 

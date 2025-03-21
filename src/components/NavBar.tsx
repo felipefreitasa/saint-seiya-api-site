@@ -16,7 +16,7 @@ interface NavItemProps {
 
 export function NavBar() {
   return (
-    <header className="p-4 bg-black shadow-md">
+    <header className="p-4 bg-black shadow-md border-b-1 border-[#333333]">
       <nav className="container mx-auto flex justify-between items-center max-w-7xl">
         <Link href="/" className="text-lg font-bold">
           <Image
@@ -45,8 +45,8 @@ function NavItem({ href, label }: NavItemProps) {
     <Link
       key={href}
       href={href}
-      className={`text-sm font-inter font-medium ${
-        pathname === href ? "text-white" : "text-gray-600 hover:text-gray-400"
+      className={`text-sm font-inter font-light  ${
+        pathname === href ? "text-white" : "text-[#888888] hover:text-white"
       }`}
     >
       {label}

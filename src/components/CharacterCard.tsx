@@ -1,3 +1,4 @@
+import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import Image from "next/image";
 
 interface CharacterCardProps {
@@ -25,26 +26,28 @@ export function CharacterCard({
   constellation,
 }: CharacterCardProps) {
   return (
-    <div className="bg-[#262626] flex flex-col sm:flex-row rounded-sm overflow-hidden w-full sm:w-auto">
+    <div className="border border-[#333333] flex flex-col sm:flex-row rounded-sm overflow-hidden w-full sm:w-[400px]">
       <Image
         priority
         alt={name}
         src={image}
         width={150}
         height={100}
-        className="w-full sm:w-auto h-auto object-cover"
+        className="w-full sm:w-[150px] h-auto object-cover flex-shrink-0"
       />
 
-      <div className="p-4 w-full sm:w-auto">
-        <p className="font-inter font-bold text-lg mb-2">{name}</p>
+      <div className="flex flex-col w-full space-y-3 p-4">
+        <p className="font-inter font-medium text-lg">
+          {capitalizeFirstLetter(name)}
+        </p>
 
-        <div>
-          <div className="flex flex-row gap-x-4 mb-3 justify-between w-full">
+        <div className="space-y-2">
+          <div className="flex flex-row gap-x-4 justify-between">
             <CharacterInfo title="Constellation" description={constellation} />
             <CharacterInfo title="Rank" description={rank} />
           </div>
 
-          <div className="flex flex-row gap-x-4 mb-3 justify-between w-full">
+          <div className="flex flex-row gap-x-4 justify-between">
             <CharacterInfo title="Mentor" description={mentor} />
             <CharacterInfo title="Gender" description={gender} />
           </div>
@@ -58,9 +61,11 @@ export function CharacterCard({
 
 function CharacterInfo({ title, description }: CharacterInfoProps) {
   return (
-    <div>
-      <p className="font-inter font-light text-sm text-[#999999]">{title}</p>
-      <p className="font-inter font-medium text-sm">{description}</p>
+    <div className="w-full">
+      <p className="font-inter font-light text-xs text-[#888888]">{title}</p>
+      <p className="font-inter font-light text-sm break-words">
+        {capitalizeFirstLetter(description)}
+      </p>
     </div>
   );
 }
