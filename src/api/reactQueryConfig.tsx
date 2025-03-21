@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export enum QUERY_KEYS {
   CHARACTER_GET_LIST = "CHARACTER_GET_LIST",
-  CHARACTER_GET_BY_ID = "CHARACTER_GET_BY_ID",
 }
 
 export function ReactQueryProvider({
