@@ -21,7 +21,7 @@ export default function RootLayout({
         <body>
           <ReactQueryProvider>
             <NavBar />
-            <main className="container mx-auto">{children}</main>
+            <main className="container mx-auto pt-[64px]">{children}</main>
           </ReactQueryProvider>
         </body>
       </html>
