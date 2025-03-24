@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "/docs", label: "Docs" },
-  { href: "/about", label: "Post" },
+  { href: "/about", label: "About" },
 ];
 
 interface NavItemProps {
