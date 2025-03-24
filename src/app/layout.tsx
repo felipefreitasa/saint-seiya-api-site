@@ -16,17 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <html lang="en">
-        <body>
-          <ReactQueryProvider>
-            <NavBar />
-            <main className="container mx-auto pt-[64px]">{children}</main>
-          </ReactQueryProvider>
-        </body>
-      </html>
-
-      <Footer />
-    </>
+    <html lang="en" className="h-full">
+      <body className="h-full flex flex-col">
+        <ReactQueryProvider>
+          <NavBar />
+          <main className="container mx-auto pt-[64px] flex-1 px-2 sm:px-2 md:px-8 lg:px-16 xl:px-32">
+            {children}
+          </main>
+          <Footer />
+        </ReactQueryProvider>
+      </body>
+    </html>
   );
 }

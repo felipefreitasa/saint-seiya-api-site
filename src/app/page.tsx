@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { Button } from "@/components/Button";
@@ -34,7 +35,7 @@ export default function HomePage() {
         </h1>
 
         <h2 className="font-extralight font-inter text-xl sm:text-2xl md:text-2xl mt-1 text-[#999999] mb-2">
-          {`Awaken your code's seventh sense`}
+          Awaken your code's seventh sense
         </h2>
 
         <Link href="/docs">
@@ -42,7 +43,7 @@ export default function HomePage() {
         </Link>
       </section>
 
-      <section className="flex flex-wrap justify-center gap-6 px-4 sm:px-8 md:px-16">
+      <section className="flex flex-wrap justify-center gap-6 px-4 sm:px-8 md:px-6">
         {characters.map((character) => (
           <CharacterCard
             key={character._id}
