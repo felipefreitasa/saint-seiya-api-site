@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-export const BASE_URL = 'https://www.saintseiyaapi.com/api';
+export const BASE_URL = "https://api.saintseiyaapi.com";
 
 export const api = axios.create({
   baseURL: BASE_URL,

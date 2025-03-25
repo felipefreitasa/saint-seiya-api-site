@@ -5,17 +5,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.saintseiyaapi.com",
+        hostname: "api.saintseiyaapi.com",
       },
     ],
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/api/(.*)",
-        destination: "https://api.saintseiyaapi.com/$1",
-      },
-    ];
   },
 };
 
