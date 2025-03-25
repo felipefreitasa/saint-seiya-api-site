@@ -25,11 +25,11 @@ export default function DocsPage() {
           </p>
           <p
             onClick={() =>
-              window.open("https://www.saintseiyaapi.com/api", "_blank")
+              window.open("https://api.saintseiyaapi.com", "_blank")
             }
             className="font-inter font-semibold text-base mb-2 underline hover:text-[#888888] cursor-pointer"
           >
-            https://www.saintseiyaapi.com/api
+            https://api.saintseiyaapi.com
           </p>
         </div>
 

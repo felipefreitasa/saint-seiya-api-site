@@ -1,4 +1,4 @@
-const getAllCharacters = `// GET https://www.saintseiyaapi.com/api/characters
+const getAllCharacters = `// GET https://api.saintseiyaapi.com/characters
 {
   "status": "success",
   "results": 16,
@@ -17,14 +17,14 @@ const getAllCharacters = `// GET https://www.saintseiyaapi.com/api/characters
           "pegasus ryuseiken",
           "pegasus suiseiken"
         ],
-        "image": "https://www.saintseiyaapi.com/assets/seiya.jpeg"
+        "image": "https://api.saintseiyaapi.com/assets/seiya.jpeg"
       }
       // ...
     ]
   }
 }`;
 
-const getSingleCharacter = `// GET https://www.saintseiyaapi.com/api/characters/67d47a5d211d5f850883bb8c
+const getSingleCharacter = `// GET https://api.saintseiyaapi.com/characters/67d47a5d211d5f850883bb8c
 {
   "status": "success",
   "data": {
@@ -40,12 +40,12 @@ const getSingleCharacter = `// GET https://www.saintseiyaapi.com/api/characters/
       "rozanha",
       "excalibur"
     ],
-    "image": "https://www.saintseiyaapi.com/assets/shiryu.jpeg"
+    "image": "https://api.saintseiyaapi.com/assets/shiryu.jpeg"
   }
 }
 `;
 
-const getCharactersWithQuery = `// GET https://www.saintseiyaapi.com/api/characters?limit=2&page=3
+const getCharactersWithQuery = `// GET https://api.saintseiyaapi.com/characters?limit=2&page=3
 {
   "status": "success",
   "results": 16,
@@ -64,7 +64,7 @@ const getCharactersWithQuery = `// GET https://www.saintseiyaapi.com/api/charact
           "scarlet needle",
           "antares"
         ],
-        "image": "https://www.saintseiyaapi.com/assets/milo.jpeg"
+        "image": "https://api.saintseiyaapi.com/assets/milo.jpeg"
       },
       {
         "_id": "67d47a5d211d5f850883bb8d",
@@ -79,7 +79,7 @@ const getCharactersWithQuery = `// GET https://www.saintseiyaapi.com/api/charact
           "diamond dust",
           "aurora execution"
         ],
-        "image": "https://www.saintseiyaapi.com/assets/hyoga.jpeg"
+        "image": "https://api.saintseiyaapi.com/assets/hyoga.jpeg"
       }
     ]
   }
