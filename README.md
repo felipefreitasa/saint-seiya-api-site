@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Saint Seiya API - Documentation landing page
+![Screenshot 2025-03-26 at 11 12 44](https://github.com/user-attachments/assets/3ea82728-3a1c-42ee-80b9-02dfb6715dca)
 
-## Getting Started
+Welcome to the Saint Seiya API documentation landing page! This website serves as an introduction to the API, providing documentation, usage examples, and access to character data from the Saint Seiya universe.
 
-First, run the development server:
+## 🌍 Live Website
+Check out the live site: [https://www.saintseiyaapi.com](https://www.saintseiyaapi.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
+- Beautifully designed landing page for the **Saint Seiya API**.
+- Easy access to API documentation and example requests.
+- Dynamic character showcase with images and descriptions.
+- Mobile-friendly and responsive design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Technologies Used
+- **Next.js**
+- **TypeScript**
+- **React**
+- **Tailwind CSS**
+- **Vercel**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📩 Support & Feedback
+- Found an issue? Open an [issue](https://github.com/felipefreitasa/saint-seiya-api-site/issues).
+- Have a feature suggestion? Let me know!
+- Follow for updates and improvements!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
