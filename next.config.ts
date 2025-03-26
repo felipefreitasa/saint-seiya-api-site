@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "api.saintseiyaapi.com",
+        hostname: "saintseiyaapi-71b85b0cc3ba.herokuapp.com",
       },
     ],
   },
