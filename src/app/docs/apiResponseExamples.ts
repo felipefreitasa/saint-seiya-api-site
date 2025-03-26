@@ -1,7 +1,7 @@
-const getAllCharacters = `// GET https://api.saintseiyaapi.com/characters
+const getAllCharacters = `// GET https://www.saintseiyaapi.com/api/characters
 {
   "status": "success",
-  "results": 16,
+  "results": 90,
   "data": {
     "characters": [
       {
@@ -17,14 +17,14 @@ const getAllCharacters = `// GET https://api.saintseiyaapi.com/characters
           "pegasus ryuseiken",
           "pegasus suiseiken"
         ],
-        "image": "https://api.saintseiyaapi.com/assets/seiya.jpeg"
+        "image": "https://saintseiyaapi-71b85b0cc3ba.herokuapp.com/assets/seiya.jpeg"
       }
       // ...
     ]
   }
 }`;
 
-const getSingleCharacter = `// GET https://api.saintseiyaapi.com/characters/67d47a5d211d5f850883bb8c
+const getSingleCharacter = `// GET https://www.saintseiyaapi.com/api/characters/67d47a5d211d5f850883bb8c
 {
   "status": "success",
   "data": {
@@ -40,46 +40,45 @@ const getSingleCharacter = `// GET https://api.saintseiyaapi.com/characters/67d4
       "rozanha",
       "excalibur"
     ],
-    "image": "https://api.saintseiyaapi.com/assets/shiryu.jpeg"
+    "image": "https://saintseiyaapi-71b85b0cc3ba.herokuapp.com/assets/shiryu.jpeg"
   }
 }
 `;
 
-const getCharactersWithQuery = `// GET https://api.saintseiyaapi.com/characters?limit=2&page=3
+const getCharactersWithQuery = `// GET https://www.saintseiyaapi.com/api/characters?limit=2&page=3
 {
   "status": "success",
-  "results": 16,
+  "results": 2,
   "data": {
     "characters": [
       {
-        "_id": "67d4799f88b6755996ca53b0",
-        "name": "milo",
-        "alias": "scorpio milo",
+        "_id": "67d4799f88b6755996ca53b3",
+        "name": "afrodite",
+        "alias": "pisces afrodite",
         "gender": "male",
-        "constellation": "scorpio",
+        "constellation": "pisces",
         "rank": "gold",
-        "cloth": "scorpio cloth",
+        "cloth": "pisces cloth",
         "mentor": "unknown",
         "techniques": [
-          "scarlet needle",
-          "antares"
+          "piranhan roses",
+          "royal demon rose"
         ],
-        "image": "https://api.saintseiyaapi.com/assets/milo.jpeg"
+        "image": "https://saintseiyaapi-71b85b0cc3ba.herokuapp.com/assets/afrodite.jpeg"
       },
       {
-        "_id": "67d47a5d211d5f850883bb8d",
-        "name": "hyoga",
-        "alias": "cygnus hyoga",
+        "_id": "67d4799f88b6755996ca53ac",
+        "name": "deathmask",
+        "alias": "cancer deathmask",
         "gender": "male",
-        "constellation": "cygnus",
-        "rank": "bronze",
-        "cloth": "cygnus cloth",
-        "mentor": "camus",
+        "constellation": "cancer",
+        "rank": "gold",
+        "cloth": "cancer cloth",
+        "mentor": "unknown",
         "techniques": [
-          "diamond dust",
-          "aurora execution"
+          "sekishiki meikai ha"
         ],
-        "image": "https://api.saintseiyaapi.com/assets/hyoga.jpeg"
+        "image": "https://saintseiyaapi-71b85b0cc3ba.herokuapp.com/assets/deathmask.jpeg"
       }
     ]
   }
