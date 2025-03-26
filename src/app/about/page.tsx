@@ -44,9 +44,6 @@ export default function AboutPage() {
           <li>
             <span className="text-white">Hosting:</span> Heroku
           </li>
-          <li>
-            <span className="text-white">Frontend:</span> Next.js, Tailwind CSS
-          </li>
         </ul>
       </section>
     </main>
