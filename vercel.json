@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://saintseiyaapi-71b85b0cc3ba.herokuapp.com/api/:path*"
+    }
+  ]
+}
