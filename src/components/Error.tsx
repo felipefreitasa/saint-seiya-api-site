@@ -17,7 +17,9 @@ export function Error({ message, onRetry }: ErrorProps) {
           alt="Saint Seiya Logo"
           src="/saint-seiya-logo.png"
         />
-        <p className="text-white font-inter text-lg mb-2 mt-1">{message}</p>
+        <p className="font-inter font-light mb-2 mt-1 text-[#999999]">
+          {message}
+        </p>
         <Button title="Try again" onClick={onRetry} />
       </div>
     </div>

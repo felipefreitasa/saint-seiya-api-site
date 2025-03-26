@@ -22,7 +22,12 @@ export default function HomePage() {
   }
 
   if (characterListError) {
-    return <Error message="ERROR" onRetry={refetchCharacterList} />;
+    return (
+      <Error
+        onRetry={refetchCharacterList}
+        message="Something went wrong. Please try again."
+      />
+    );
   }
 
   const characters = shuffleCharacters(characterList?.data.characters) ?? [];
