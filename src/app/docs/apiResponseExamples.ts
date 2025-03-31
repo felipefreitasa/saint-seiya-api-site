@@ -2,6 +2,16 @@ const getAllCharacters = `// GET https://www.saintseiyaapi.com/api/characters
 {
   "status": "success",
   "results": 90,
+  "pagination": {
+    "totalItems": 90,
+    "totalPages": 9,
+    "currentPage": 1,
+    "perPage": 10,
+    "hasNextPage": true,
+    "hasPrevPage": false,
+    "nextPage": 2,
+    "prevPage": null
+  },
   "data": {
     "characters": [
       {
@@ -49,6 +59,16 @@ const getCharactersWithQuery = `// GET https://www.saintseiyaapi.com/api/charact
 {
   "status": "success",
   "results": 2,
+  "pagination": {
+    "totalItems": 90,
+    "totalPages": 45,
+    "currentPage": 3,
+    "perPage": 2,
+    "hasNextPage": true,
+    "hasPrevPage": true,
+    "nextPage": 4,
+    "prevPage": 2
+  },
   "data": {
     "characters": [
       {

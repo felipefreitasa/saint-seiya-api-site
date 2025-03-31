@@ -6,7 +6,6 @@ import { CharacterCard } from "@/components/CharacterCard";
 import { Error } from "@/components/Error";
 import { Loading } from "@/components/Loading";
 import { useCharacterGetList } from "@/domain/Characters/useCases/useCharacterGetList";
-import { shuffleCharacters } from "@/utils/shuffleCharacters";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -30,8 +29,6 @@ export default function HomePage() {
     );
   }
 
-  const characters = shuffleCharacters(characterList?.data.characters) ?? [];
-
   return (
     <main className="flex items-center justify-center flex-col">
       <section className="text-center mt-20 mb-20 px-4 sm:px-8 md:px-16">
@@ -49,7 +46,7 @@ export default function HomePage() {
       </section>
 
       <section className="flex flex-wrap justify-center gap-6 px-4 sm:px-8 md:px-6">
-        {characters.map((character) => (
+        {characterList?.data.characters.map((character) => (
           <CharacterCard
             key={character._id}
             name={character.name}
