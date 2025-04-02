@@ -36,7 +36,8 @@ export default function AboutPage() {
         <h2 className="font-inter font-semibold text-xl mt-6">Tech Stack</h2>
         <ul className="list-disc pl-5 text-[#888888] font-inter font-light text-base">
           <li>
-            <span className="text-white">Backend:</span> Node.js, Express
+            <span className="text-white">Backend:</span> Node.js, Express,
+            Swagger
           </li>
           <li>
             <span className="text-white">Database:</span> MongoDB
