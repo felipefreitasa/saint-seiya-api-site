@@ -40,9 +40,19 @@ export default function HomePage() {
           Awaken your code's seventh sense
         </h2>
 
-        <Link href="/docs">
-          <Button title="Read the docs" />
-        </Link>
+        <div className="space-x-3 flex items-center justify-center">
+          <Link href="/docs">
+            <Button title="Read the docs" />
+          </Link>
+
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://saintseiyaapi-71b85b0cc3ba.herokuapp.com/api-docs/"
+          >
+            <Button title="Explore API with Swagger" variation="outline" />
+          </a>
+        </div>
       </section>
 
       <section className="flex flex-wrap justify-center gap-6 px-4 sm:px-8 md:px-6">
