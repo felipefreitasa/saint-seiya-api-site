@@ -63,7 +63,7 @@ function NavItem({ href, label }: NavItemProps) {
   return (
     <Link
       href={href}
-      className={`text-sm font-inter font-light  ${
+      className={`text-sm font-inter font-light transition-all duration-300  ${
         pathname === href ? "text-white" : "text-[#888888] hover:text-white"
       }`}
     >
