@@ -8,6 +8,7 @@ interface CharacterCardProps {
   mentor: string;
   gender: string;
   techniques: string;
+  onClick: () => void;
   constellation: string;
 }
 
@@ -24,9 +25,13 @@ export function CharacterCard({
   gender,
   techniques,
   constellation,
+  onClick,
 }: CharacterCardProps) {
   return (
-    <div className="border border-[#333333] flex flex-col sm:flex-row rounded-sm overflow-hidden w-full sm:w-[400px]">
+    <div
+      onClick={onClick}
+      className="border border-[#333333] flex flex-col sm:flex-row rounded-sm overflow-hidden w-full sm:w-[400px] cursor-pointer transition-all duration-300 hover:bg-[#1a1a1a]"
+    >
       <Image
         priority
         alt={name}

@@ -70,6 +70,12 @@ export default function HomePage() {
                 ? `${character.techniques[0]} & ${character.techniques[1]}`
                 : character.techniques[0]
             }
+            onClick={() => {
+              window.open(
+                `https://www.saintseiyaapi.com/api/characters/${character._id}`,
+                "_blank"
+              );
+            }}
           />
         ))}
       </section>
