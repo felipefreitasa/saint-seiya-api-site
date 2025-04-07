@@ -6,25 +6,28 @@ import { CharacterCard } from "@/components/CharacterCard";
 import { Error } from "@/components/Error";
 import { Loading } from "@/components/Loading";
 import { useCharacterGetList } from "@/domain/Characters/useCases/useCharacterGetList";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
 export default function HomePage() {
   const {
-    characterList,
-    characterListError,
-    refetchCharacterList,
-    isLoadingCharacterList,
+    list,
+    isError,
+    refresh,
+    isLoading,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
   } = useCharacterGetList();
 
-  if (isLoadingCharacterList) {
+  if (isLoading) {
     return <Loading />;
   }
 
-  if (characterListError) {
+  if (isError) {
     return (
       <Error
-        onRetry={refetchCharacterList}
+        onRetry={refresh}
         message="Something went wrong. Please try again."
       />
     );
@@ -68,28 +71,40 @@ export default function HomePage() {
         transition={{ duration: 0.5, delay: 0.4 }}
       >
         <section className="flex flex-wrap justify-center gap-6 px-4 sm:px-8 md:px-6">
-          {characterList?.data.characters.map((character) => (
-            <CharacterCard
-              key={character._id}
-              name={character.name}
-              rank={character.rank}
-              image={character.image}
-              gender={character.gender}
-              mentor={character.mentor}
-              constellation={character.constellation}
-              techniques={
-                character.techniques.length > 1
-                  ? `${character.techniques[0]} & ${character.techniques[1]}`
-                  : character.techniques[0]
-              }
-              onClick={() => {
-                window.open(
-                  `https://www.saintseiyaapi.com/api/characters/${character._id}`,
-                  "_blank"
-                );
-              }}
-            />
-          ))}
+          <AnimatePresence initial={false}>
+            {list?.map((character) => (
+              <CharacterCard
+                key={character._id}
+                name={character.name}
+                rank={character.rank}
+                image={character.image}
+                gender={character.gender}
+                mentor={character.mentor}
+                constellation={character.constellation}
+                techniques={
+                  character.techniques.length > 1
+                    ? `${character.techniques[0]} & ${character.techniques[1]}`
+                    : character.techniques[0]
+                }
+                onClick={() => {
+                  window.open(
+                    `https://www.saintseiyaapi.com/api/characters/${character._id}`,
+                    "_blank"
+                  );
+                }}
+              />
+            ))}
+          </AnimatePresence>
+
+          {hasNextPage && (
+            <div className="w-full flex justify-center ">
+              <Button
+                title="Load more"
+                onClick={fetchNextPage}
+                isLoading={isFetchingNextPage}
+              />
+            </div>
+          )}
         </section>
       </motion.div>
     </main>

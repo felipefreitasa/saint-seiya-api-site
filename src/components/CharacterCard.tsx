@@ -1,4 +1,5 @@
 import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface CharacterCardProps {
@@ -28,8 +29,13 @@ export function CharacterCard({
   onClick,
 }: CharacterCardProps) {
   return (
-    <div
+    <motion.div
+      layout
       onClick={onClick}
+      exit={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0, y: 10 }}
       className="border border-[#333333] flex flex-col sm:flex-row rounded-sm overflow-hidden w-full sm:w-[400px] cursor-pointer transition-all duration-300 hover:bg-[#1a1a1a]"
     >
       <Image
@@ -60,7 +66,7 @@ export function CharacterCard({
           <CharacterInfo title="Techniques" description={techniques} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

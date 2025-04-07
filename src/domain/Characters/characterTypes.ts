@@ -2,6 +2,16 @@ export interface CharactersApiResponse {
   data: Data;
   status: string;
   results: number;
+  pagination: {
+    perPage: number;
+    totalItems: number;
+    totalPages: number;
+    currentPage: number;
+    hasNextPage: boolean;
+    hasPrevPage: boolean;
+    nextPage: number | null;
+    prevPage: number | null;
+  };
 }
 
 interface Data {
