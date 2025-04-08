@@ -47,7 +47,7 @@ export default function DocsPage() {
 
         <section className="pt-8">
           <h2 className="font-inter font-semibold text-xl">
-            Get all characters
+            1. Get all characters
           </h2>
           <p className="font-inter font-light text-base text-[#888888] mb-2">
             You can access the list of characters by using the /characters
@@ -55,33 +55,72 @@ export default function DocsPage() {
           </p>
 
           <CodeSyntaxHighlighter code={apiResponseExamples.getAllCharacters} />
+
+          <div className="pt-6">
+            <h3 className="font-inter font-semibold text-lg">
+              1.1 Query Example with Limit and Page
+            </h3>
+            <p className="font-inter font-light text-base text-[#888888] mb-2">
+              The /characters endpoint supports the <code>limit</code> and{" "}
+              <code>page</code> query parameters. You can adjust the number of
+              characters returned and navigate through the results.
+            </p>
+            <p className="font-inter font-light text-base text-[#888888] mb-4">
+              Here's an example of a query that fetches 2 characters on page 3:
+            </p>
+
+            <CodeSyntaxHighlighter
+              code={apiResponseExamples.getCharactersWithQuery}
+            />
+          </div>
+
+          <div className="pt-6">
+            <h3 className="font-inter font-semibold text-lg">
+              1.2 Filter by Rank
+            </h3>
+            <p className="font-inter font-light text-base text-[#888888] mb-2">
+              The /characters endpoint also supports a <code>rank</code> query
+              parameter to filter characters by their rank.
+            </p>
+            <ul className="list-disc pl-5 text-[#888888] font-inter font-light text-base mb-4">
+              <li>
+                <span className="text-white">bronze</span> – Bronze Saints
+              </li>
+              <li>
+                <span className="text-white">gold</span> – Gold Saints
+              </li>
+              <li>
+                <span className="text-white">god</span> – Gods like Athena or
+                Hades
+              </li>
+              <li>
+                <span className="text-white">mariner</span> – Poseidon's army
+              </li>
+              <li>
+                <span className="text-white">specter</span> – Hades' army
+              </li>
+              <li>
+                <span className="text-white">steel</span> – Steel Saints
+              </li>
+              <li>
+                <span className="text-white">unknown</span> – Characters with
+                undefined or secret ranks
+              </li>
+            </ul>
+
+            <CodeSyntaxHighlighter
+              code={`// GET https://www.saintseiyaapi.com/api/characters?rank=gold`}
+            />
+          </div>
         </section>
 
-        <section className="pt-8">
+        <section className="pt-12 border-t border-[#333] mt-12">
           <h2 className="font-inter font-semibold text-xl">
-            Query Example with Limit and Page
-          </h2>
-          <p className="font-inter font-light text-base text-[#888888] mb-2">
-            The /characters endpoint supports the limit and page query
-            parameters. You can adjust the number of characters returned and
-            navigate through the results.
-          </p>
-          <p className="font-inter font-light text-base text-[#888888] mb-4">
-            Here's an example of a query that fetches 2 characters on page 3:
-          </p>
-
-          <CodeSyntaxHighlighter
-            code={apiResponseExamples.getCharactersWithQuery}
-          />
-        </section>
-
-        <section className="pt-8">
-          <h2 className="font-inter font-semibold text-xl">
-            Get a single character
+            2. Get a single character
           </h2>
           <p className="font-inter font-light text-base text-[#888888] mb-2">
             To get a single character, use the /characters/:id endpoint,
-            replacing :id with the character's unique identifier.
+            replacing <code>:id</code> with the character's unique identifier.
           </p>
 
           <CodeSyntaxHighlighter

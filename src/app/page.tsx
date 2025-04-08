@@ -42,7 +42,7 @@ export default function HomePage() {
       >
         <section className="text-center mt-20 mb-20 px-4 sm:px-8 md:px-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-inter">
-            The Saint Seiya API
+            Saint Seiya API
           </h1>
 
           <h2 className="font-extralight font-inter text-xl sm:text-2xl md:text-2xl mt-1 text-[#999999] mb-2">
