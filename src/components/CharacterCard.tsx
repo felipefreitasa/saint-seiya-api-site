@@ -32,10 +32,7 @@ export function CharacterCard({
     <motion.div
       layout
       onClick={onClick}
-      exit={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      initial={{ opacity: 0, y: 10 }}
+      transition={{ layout: { duration: 0.3 } }}
       className="border border-[#333333] flex flex-col sm:flex-row rounded-sm overflow-hidden w-full sm:w-[400px] cursor-pointer transition-all duration-300 hover:bg-[#1a1a1a]"
     >
       <Image
