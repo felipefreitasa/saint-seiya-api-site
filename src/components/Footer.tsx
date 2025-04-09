@@ -33,7 +33,7 @@ function SocialIcon({ href, icon }: SocialIconProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-[#999999] hover:text-white"
+      className="text-[#999999] hover:text-white transition-all duration-300"
     >
       {icon}
     </a>
