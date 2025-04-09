@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { Loader } from "react-feather";
 
 interface ButtonProps {
@@ -21,8 +22,24 @@ export function Button({
 
   return (
     <button onClick={onClick} className={buttonClassName} disabled={isLoading}>
-      {isLoading && <Loader className="w-4 h-4 animate-spin" />}
-      {title}
+      <span className="flex items-center gap-2">
+        {title}
+
+        <AnimatePresence mode="wait">
+          {isLoading && (
+            <motion.span
+              key="loader"
+              transition={{ duration: 0.3 }}
+              exit={{ width: 0, opacity: 0 }}
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: 16, opacity: 1 }}
+              className="flex items-center justify-center overflow-hidden"
+            >
+              <Loader className="h-4 w-4 animate-spin" />
+            </motion.span>
+          )}
+        </AnimatePresence>
+      </span>
     </button>
   );
 }

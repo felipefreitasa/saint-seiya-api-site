@@ -104,6 +104,8 @@ export default function HomePage() {
                   } transition-all duration-300 ease-in-out`}
                 >
                   <span className="flex items-center gap-2">
+                    {capitalizeFirstLetter(rank)}
+
                     <AnimatePresence mode="wait">
                       {showLoader && (
                         <motion.span
@@ -118,7 +120,6 @@ export default function HomePage() {
                         </motion.span>
                       )}
                     </AnimatePresence>
-                    {capitalizeFirstLetter(rank)}
                   </span>
                 </button>
               );
