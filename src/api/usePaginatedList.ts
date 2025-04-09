@@ -18,12 +18,13 @@ interface PaginatedListOptions {
 
 export interface ApiParams {
   page?: number;
+  rank?: string;
   limit?: number;
 }
 
 export function usePaginatedList<Data>(
   queryKey: readonly unknown[],
-  getList: ({ limit, page }: ApiParams) => Promise<{
+  getList: ({ limit, page, rank }: ApiParams) => Promise<{
     characters: Data[];
     pagination: {
       hasNextPage: boolean;
@@ -53,6 +54,8 @@ export function usePaginatedList<Data>(
         return [...prev, ...curr.characters];
       }, []);
       setList(newList);
+    } else {
+      setList([]);
     }
   }, [query.data]);
 

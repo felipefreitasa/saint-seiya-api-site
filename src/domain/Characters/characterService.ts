@@ -4,7 +4,7 @@ import { CharactersApiResponse } from "@/domain/Characters/characterTypes";
 
 export const CHARACTER_PATH = "characters";
 
-async function getList({ page = 1, limit = 6 }: ApiParams): Promise<{
+async function getList({ page = 1, limit = 6, rank }: ApiParams): Promise<{
   characters: CharactersApiResponse["data"]["characters"];
   pagination: {
     hasNextPage: boolean;
@@ -15,6 +15,7 @@ async function getList({ page = 1, limit = 6 }: ApiParams): Promise<{
   const response = await api.get<CharactersApiResponse>(CHARACTER_PATH, {
     params: {
       page,
+      rank,
       limit,
     },
   });
