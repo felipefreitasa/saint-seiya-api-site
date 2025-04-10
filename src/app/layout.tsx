@@ -2,6 +2,7 @@ import { ReactQueryProvider } from "@/api/reactQueryConfig";
 import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <main className="container mx-auto pt-[64px] flex-1 px-2 sm:px-2 md:px-8 lg:px-16 xl:px-32">
             {children}
             <Analytics />
+            <SpeedInsights />
           </main>
           <Footer />
         </ReactQueryProvider>
