@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
+import { useHome } from "@/app/useHome";
 import { Button } from "@/components/Button";
 import { CharacterCard } from "@/components/CharacterCard";
 import { Error } from "@/components/Error";
 import { FilterTag } from "@/components/FilterTag";
 import { Loading } from "@/components/Loading";
 import { Character } from "@/domain/Characters/characterTypes";
-import { useCharacterGetList } from "@/domain/Characters/useCases/useCharacterGetList";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -38,9 +38,11 @@ export default function HomePage() {
     rankBeingLoaded,
     isInitialLoading,
     isFetchingNextPage,
-  } = useCharacterGetList();
+  } = useHome();
 
-  if (isInitialLoading) return <Loading />;
+  if (isInitialLoading) {
+    return <Loading />;
+  }
 
   if (isError)
     return (
