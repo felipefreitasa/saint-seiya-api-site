@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -31,29 +32,35 @@ export function NavBar() {
   }, []);
 
   return (
-    <header
-      className={`p-4 bg-black/50 shadow-md border-b-1 border-[#333333] fixed top-0 left-0 w-full z-10 transition-all duration-300 ${
-        isScrolled ? "backdrop-blur-md" : "backdrop-blur-none"
-      }`}
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <nav className="container mx-auto flex justify-between items-center max-w-7xl">
-        <Link href="/" className="text-lg font-bold">
-          <Image
-            priority
-            width={90}
-            height={45}
-            alt="Saint Seiya Logo"
-            src="/saint-seiya-logo.png"
-          />
-        </Link>
+      <header
+        className={`p-4 bg-black/50 shadow-md border-b-1 border-[#333333] fixed top-0 left-0 w-full z-10 transition-all duration-300 ${
+          isScrolled ? "backdrop-blur-md" : "backdrop-blur-none"
+        }`}
+      >
+        <nav className="container mx-auto flex justify-between items-center max-w-7xl">
+          <Link href="/" className="text-lg font-bold">
+            <Image
+              priority
+              width={90}
+              height={45}
+              alt="Saint Seiya Logo"
+              src="/saint-seiya-logo.png"
+            />
+          </Link>
 
-        <div className="space-x-4 flex items-center justify-center">
-          {navLinks.map(({ href, label }) => (
-            <NavItem key={href} href={href} label={label} />
-          ))}
-        </div>
-      </nav>
-    </header>
+          <div className="space-x-4 flex items-center justify-center">
+            {navLinks.map(({ href, label }) => (
+              <NavItem key={href} href={href} label={label} />
+            ))}
+          </div>
+        </nav>
+      </header>
+    </motion.div>
   );
 }
 
