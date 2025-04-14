@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.saintseiyaapi.com
+
+# Sitemaps
+Sitemap: https://www.saintseiyaapi.com/sitemap.xml
