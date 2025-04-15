@@ -4,7 +4,7 @@ export function Seo() {
   return (
     <>
       <Head>
-        <title>Saint Seiya API | Free REST API for Cavaleiros do Zodíaco</title>
+        <title>Saint Seiya API | Free REST API for Saint Seiya</title>
         <meta
           name="description"
           content="Free and open-source API with data from Saint Seiya (Cavaleiros do Zodíaco). Access Bronze Saints, Gold Saints, Specters, and more!"
