@@ -11,7 +11,7 @@ export default function AboutPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <main className="px-4 md:px-8 lg:px-16">
+      <main className="px-4 md:px-8 lg:px-16 mt-8">
         <AboutHeader />
 
         <WhatIsThisSection />

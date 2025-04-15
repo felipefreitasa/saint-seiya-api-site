@@ -12,7 +12,7 @@ export default function DocsPage() {
       transition={{ duration: 0.5 }}
       initial={{ opacity: 0, y: 10 }}
     >
-      <main className="px-4 md:px-8 lg:px-16">
+      <main className="px-4 md:px-8 lg:px-16 mt-8">
         <IntroductionSection />
 
         <GetAllCharactersSection />
