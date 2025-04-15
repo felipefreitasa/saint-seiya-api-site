@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "REST API",
     "free anime API",
     "Saint Seiya developer API",
+    "saint seiya api",
   ],
   openGraph: {
     type: "website",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
       "Access detailed and structured information about Saint Seiya characters, armors, and more through a modern and free API.",
     images: [
       {
-        url: "https://www.saintseiyaapi.com/og-image.jpg",
+        url: "https://www.saintseiyaapi.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Saint Seiya API Open Graph Image",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     title: "Saint Seiya API – Free & Open REST API",
     description:
       "Explore the Saint Seiya universe via a powerful public API with detailed data for developers and fans alike.",
-    images: ["https://www.saintseiyaapi.com/og-image.jpg"],
+    images: ["https://www.saintseiyaapi.com/og-image.png"],
   },
 };
 

@@ -6,7 +6,6 @@ import { CharacterCard } from "@/components/CharacterCard";
 import { Error } from "@/components/Error";
 import { FilterTag } from "@/components/FilterTag";
 import { Loading } from "@/components/Loading";
-import { Seo } from "@/components/Seo";
 import { Character } from "@/domain/Characters/characterTypes";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -54,8 +53,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Seo />
-
       <main className="flex flex-col items-center justify-center">
         <motion.section
           animate={{ opacity: 1, y: 0 }}
