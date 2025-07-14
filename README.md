@@ -3,9 +3,6 @@
 
 Welcome to the Saint Seiya API documentation landing page! This website serves as an introduction to the API, providing documentation, usage examples, and access to character data from the Saint Seiya universe.
 
-## 🌍 Live Website
-Check out the live site: [https://www.saintseiyaapi.com](https://www.saintseiyaapi.com)
-
 ## ✨ Features
 - Beautifully designed landing page for the **Saint Seiya API**.
 - Easy access to API documentation and example requests.
